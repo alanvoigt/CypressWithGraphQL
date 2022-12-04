@@ -48,3 +48,6 @@ describe('GraphQ with Cypress', () => {
       })
     })  
 })
+
+// Será que esse código tá bom?
+// Porque normalmente é POST?
