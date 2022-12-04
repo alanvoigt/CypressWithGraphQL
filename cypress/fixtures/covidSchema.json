@@ -1,0 +1,50 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "type": "object",
+  "required": ["data"],
+  "properties": {
+    "data": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "uid",
+          "uf",
+          "state",
+          "cases",
+          "deaths",
+          "suspects",
+          "refuses",
+          "datetime"
+        ],
+        "properties": {
+          "uid": {
+            "type": "integer"
+          },
+          "uf": {
+            "type": "string"
+          },
+          "state": {
+            "type": "string"
+          },
+          "cases": {
+            "type": "integer"
+          },
+          "deaths": {
+            "type": "integer"
+          },
+          "suspects": {
+            "type": "integer"
+          },
+          "refuses": {
+            "type": "integer"
+          },
+          "datetime": {
+            "type": "string",
+            "format": "date-time"
+          }
+        }
+      }
+    }
+  }
+}

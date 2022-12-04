@@ -1,0 +1,86 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "type": "object",
+  "required": ["data"],
+  "properties": {
+    "data": {
+      "type": "object",
+      "required": ["getCityByName"],
+      "properties": {
+        "getCityByName": {
+          "type": "object",
+          "required": ["country", "weather"],
+          "properties": {
+            "country": {
+              "type": "string",
+              "enum": ["BR"]
+            },
+            "weather": {
+              "type": "object",
+              "required": ["summary", "temperature", "wind", "clouds"],
+              "properties": {
+                "summary": {
+                  "type": "object",
+                  "required": ["title", "description"],
+                  "properties": {
+                    "title": {
+                      "type": "string"
+                    },
+                    "description": {
+                      "type": "string"
+                    }
+                  }
+                },
+                "temperature": {
+                  "type": "object",
+                  "required": ["actual", "feelsLike", "min", "max"],
+                  "properties": {
+                    "actual": {
+                      "type": "number",
+                      "maximum": 50
+                    },
+                    "feelsLike": {
+                      "type": "number"
+                    },
+                    "min": {
+                      "type": "integer"
+                    },
+                    "max": {
+                      "type": "integer"
+                    }
+                  }
+                },
+                "wind": {
+                  "type": "object",
+                  "required": ["speed"],
+                  "properties": {
+                    "speed": {
+                      "type": "number"
+                    }
+                  }
+                },
+                "clouds": {
+                  "type": "object",
+                  "required": ["all", "visibility", "humidity"],
+                  "properties": {
+                    "all": {
+                      "type": "integer"
+                    },
+                    "visibility": {
+                      "type": "integer"
+                    },
+                    "humidity": {
+                      "type": "integer",
+                      "minimum": 0,
+                      "maximum": 100
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
